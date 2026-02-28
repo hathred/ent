@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>BDD Test Scenarios | Legal Hub</title>
+  <link rel="stylesheet" href="../goldhat.css"/>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="shell" style="grid-template-columns:1fr">
+    <main class="main" id="main">
+      <div class="container">
+        <h1>BDD Test Scenarios</h1>
+        <p class="kicker">legal.goldhatconsulting.com</p>
+
+        <article class="card prose">
+          <h2>Scenario: Page loads with accessible navigation</h2>
+          <pre><code>Feature: Legal Hub Accessibility
+  Scenario: Page loads with accessible navigation
+    Given I navigate to "legal.goldhatconsulting.com"
+    Then the page title should contain "Legal Hub"
+    And a skip link with text "Skip to content" should exist
+    And the sidebar should have aria-label "Site navigation"
+    And the current nav link should have aria-current "page"
+    And all interactive elements should have a visible focus ring
+
+  Scenario: High contrast toggle works
+    Given I navigate to "legal.goldhatconsulting.com"
+    When I click the "High Contrast" button
+    Then the html element should have class "contrast"
+    And the button aria-pressed should be "true"</code></pre>
+        </article>
+
+        <article class="card prose">
+          <h2>TODO: Domain-Specific Scenarios</h2>
+          <div class="callout gold">
+            <p><strong>Phase 1:</strong> Add Gherkin scenarios specific to legal.goldhatconsulting.com functionality.</p>
+            <p>Per UI Policy §22 (Arya/ARIA): every interactive element needs a scenario proving its name, role, and keyboard behavior.</p>
+          </div>
+        </article>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

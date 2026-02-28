@@ -1,0 +1,13 @@
+# ═══════════════════════════════════════
+# professional.thearchdaemon.org — admin/.htaccess
+# Basic Auth protection for admin panel
+# ═══════════════════════════════════════
+
+# TODO: Generate .htpasswd and set path
+# AuthType Basic
+# AuthName "ArchDaemon Admin"
+# AuthUserFile /path/to/.htpasswd
+# Require valid-user
+
+# For now: deny all until admin is ready
+Require all denied
