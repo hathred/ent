@@ -92,8 +92,6 @@ Every site directory contains:
 ## Deployment
 
 ```bash
-# 1. Run the schema on IONOS MariaDB
-mysql -h db5019716891.hosting-data.io -u dbu2832634 -p dbu2832634 < shared/db_schema.sql
 
 # 2. For each site, copy goldhat.css + goldhat.js from shared/
 cp shared/v2.0.0/goldhat.css root/goldhat.css
